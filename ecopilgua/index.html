@@ -2,6 +2,9 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!--  VINCULACIÓN DEL ARCHIVO CSS EXTERNO -->
+    <link rel="stylesheet" href="css/estilo_header.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,25 +14,40 @@
 </head>
 
 <body>
-    <header>
-        <img src="imagenes/logo.jpg" alt="Logo oficial de Eco Pilgua" width="200">
-        <h1>Eco Pilgua</h1>
-        <p><em>Del dolor más grande nació la fuerza más linda. Transformando momentos cotidianos en experiencias
-                memorables a través del diseño personalizado.</em></p>
+
+    <header class="header-container">
+
+        <!-- Menú con formato horizontal -->
+        <div class="menu-container">
+            <nav class="nav">
+                <ul>
+                    <li><a href="#historia">Nuestra Historia</a></li>
+                    <li><a href="#mision-vision">Misión y Visión</a></li>
+                    <li><a href="#productos">Nuestros Productos</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+        </div>
+        <div class="logo">
+            <img src="imagenes/logo.jpg" alt="Eco Pilgua">
+
+        </div>
+
+        <div class="texto-principal">
+            <p><em>Del dolor más grande nació la fuerza más linda. Transformando momentos cotidianos en experiencias
+                    memorables a través del diseño personalizado.</em></p>
+        </div>
     </header>
 
+
+
+
     <!-- navegación para el contenido principal -->
-    <nav>
-        <ul>
-            <li><a href="#historia">Nuestra Historia</a></li>
-            <li><a href="#mision-vision">Misión y Visión</a></li>
-            <li><a href="#productos">Nuestros Productos</a></li>
-            <li><a href="#testimonios">Testimonios</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
 
     <main>
+
         <!-- Sección de Historia de la Empresa -->
         <section id="historia">
             <h2>Nuestra Historia</h2>
@@ -98,7 +116,8 @@
                 <p>"Los productos de Eco Pilgua son preciosos y duraderos. Siempre recibo elogios por los tazones y
                     cuadernos personalizados..."<br> <strong>— Danae, clienta frecuente.</strong></p>
                 <p>"Excelente atención y compromiso, todo llega a tiempo y con una presentación impecable."<br>
-                    <strong>— Cindy M., enfermera.</strong></p>
+                    <strong>— Cindy M., enfermera.</strong>
+                </p>
             </div>
         </section>
 
@@ -132,7 +151,8 @@
             </li>
             <li>
                 <img src="imagenes/icons/icon-facebook.jpg" alt="Facebook" width="20" height="20">
-                <strong>Facebook:</strong> <a href=" https://www.facebook.com/ecopilgua">https://www.facebook.com/ecopilgua</a>
+                <strong>Facebook:</strong> <a
+                    href=" https://www.facebook.com/ecopilgua">https://www.facebook.com/ecopilgua</a>
 
             </li>
             <li>
@@ -149,7 +169,8 @@
             </li>
             <li>
                 <img src="imagenes/icons/icon-ubicacion.jpg" alt="Dirección" width="20" height="20">
-                <strong>Dirección: Avenida 2 Sur 1234, Talca, Región del Maule, Chile.</strong> Con envío a todo Chile. Y en Talca podemos coordinar según disponibilidad.
+                <strong>Dirección: Avenida 2 Sur 1234, Talca, Región del Maule, Chile.</strong> Con envío a todo Chile.
+                Y en Talca podemos coordinar según disponibilidad.
             </li>
         </ul>
     </footer>
