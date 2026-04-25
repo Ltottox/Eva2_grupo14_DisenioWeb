@@ -1,0 +1,151 @@
+/* CSS para la sección PRODUCTOS
+   -------------------------------  */
+
+/* Variables de color (EcoPilgua)  */
+:root{
+  --bg: #f2dcdd;
+  --panel: #ffffff;
+  --line: #b45a69;
+  --bar: #e6c3c6;
+  --text: #964554;
+  --muted: #6b6b6b;
+
+  --white: #ffffff;
+  --scrollTrack: #f2dcdd;
+  --scrollThumb: #b45a69;
+  --scrollThumbHover: #964554;
+
+  /* Tokens para carrusel responsive */
+  --cardW: 220px;   /* escritorio */
+  --cardH: 220px;   /* escritorio */
+  --cardW-md: 180px;/* tablet */
+  --cardH-md: 240px;/* tablet */
+  --cardW-sm: 150px;/* móvil */
+  --cardH-sm: 200px;/* móvil */
+  --gap: 20px;
+}
+
+#productos{
+  background: var(--bg);
+  padding-inline: 16px;
+}
+
+/* TÍTULO "Nuestros productos y servicios" */
+#productos h2{
+  font-size: 22px;
+  color: var(--text);
+}
+#productos h2 + p{
+  color: var(--text);
+  font-style: italic;
+  font-size: 16px;
+}
+
+/* Lista */
+#productos ul{
+  list-style: none;
+  padding: 0;
+  margin: 14px 0;
+  display: grid;
+  gap: 18px;
+}
+#productos li{
+  padding: 10px;
+  background: var(--bg);
+}
+#productos li > p{
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 14px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--line);
+  color: var(--text);
+}
+
+/* CARRUSEL (BASE) */
+.carrusel{
+  margin-top: 6px;
+}
+.carrusel-track{
+  display: grid;
+  grid-auto-flow: column;
+  gap: var(--gap);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* CARRUSEL PRODUCTOS */
+#productos .carrusel-track.productos-track{
+  grid-auto-columns: var(--cardW);
+  max-width: calc(5 * var(--cardW) + 4 * var(--gap)); /* 5 productos visibles en escritorio */
+  margin-inline: auto;
+  padding-inline: 12px;
+  scroll-padding-inline: 12px;
+  gap: var(--gap);
+}
+
+/* TARJETA DE PRODUCTO */
+.producto-card{
+  width: var(--cardW);
+  height: var(--cardH);
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 6px;
+}
+
+/* Recuadro de imagen uniforme */
+.producto-card img{
+  width: 100%;
+  height: 80%;                     /* recuadro fijo para la imagen */
+  object-fit: contain;              /* la figura se adapta sin recortarse */
+  border: 1px solid #c9a1a8;
+  background: var(--white);
+  border-radius: 6px;
+}
+
+/* Leyenda */
+.producto-card figcaption{
+  height: 20%;                      /* ocupa el resto de la tarjeta */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;                  /* tipografía uniforme y legible */
+  text-align: center;
+  color: var(--text);
+  line-height: 1.5;
+  padding: 8px;
+}
+
+/* SCROLLBAR */
+.carrusel-track::-webkit-scrollbar{ height: 6px; }
+.carrusel-track::-webkit-scrollbar-track{ background: var(--scrollTrack); }
+.carrusel-track::-webkit-scrollbar-thumb{ background: var(--scrollThumb); }
+.carrusel-track::-webkit-scrollbar-thumb:hover{ background: var(--scrollThumbHover); }
+.carrusel-track{ scrollbar-width: thin; scrollbar-color: var(--scrollThumb) var(--scrollTrack); }
+
+/* RESPONSIVE */
+@media (max-width: 900px){
+  :root{ --cardW: var(--cardW-md); --cardH: var(--cardH-md); }
+  #productos .carrusel-track.productos-track{
+    max-width: calc(4 * var(--cardW) + 3 * var(--gap));
+  }
+}
+@media (max-width: 720px){
+  #productos .carrusel-track.productos-track{
+    max-width: calc(3 * var(--cardW) + 2 * var(--gap));
+  }
+}
+@media (max-width: 540px){
+  :root{ --cardW: var(--cardW-sm); --cardH: var(--cardH-sm); }
+  #productos .carrusel-track.productos-track{
+    max-width: calc(2 * var(--cardW) + 1 * var(--gap));
+    gap: 16px;
+  }
+}
