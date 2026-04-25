@@ -3,16 +3,16 @@
 
 /* Variables de color (EcoPilgua)  */
 :root{
-  --bg: #f2dcdd;
+  --bg: #F9E6EC;       /* rosa suave */
   --panel: #ffffff;
-  --line: #b45a69;
+  --line: #D4AF37;     /* dorado suave */
   --bar: #e6c3c6;
-  --text: #964554;
-  --muted: #6b6b6b;
+  --text: #2E2E2E;     /* gris oscuro elegante */
+  --muted: #555555;    /* gris medio */
 
   --white: #ffffff;
-  --scrollTrack: #f2dcdd;
-  --scrollThumb: #b45a69;
+  --scrollTrack: #F9E6EC;
+  --scrollThumb: #E63946;   /* coral */
   --scrollThumbHover: #964554;
 
   /* Tokens para carrusel responsive */
@@ -25,18 +25,24 @@
   --gap: 20px;
 }
 
+/*Se Importan tipografías Playfair+Display y Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@400;600&display=swap');
+
 #productos{
   background: var(--bg);
   padding-inline: 16px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* TÍTULO "Nuestros productos y servicios" */
 #productos h2{
-  font-size: 22px;
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
   color: var(--text);
+  margin-bottom: 8px;
 }
 #productos h2 + p{
-  color: var(--text);
+  color: var(--muted);
   font-style: italic;
   font-size: 16px;
 }
@@ -45,28 +51,34 @@
 #productos ul{
   list-style: none;
   padding: 0;
-  margin: 14px 0;
+  margin: 20px 0;
   display: grid;
-  gap: 18px;
+  gap: 20px;
 }
+
 #productos li{
-  padding: 10px;
-  background: var(--bg);
-}
-#productos li > p{
-  font-size: 12px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin: 14px 0 10px;
-  padding-bottom: 4px;
-  border-bottom: 1px solid var(--line);
-  color: var(--text);
+  padding: 12px;
 }
 
 /* CARRUSEL (BASE) */
 .carrusel{
   margin-top: 6px;
+
+  /* Fondo para separar las categorías de productos */
+  background-image: url("../imagenes/ColorFondo/fondo_categorias.png");
+  background-repeat: repeat;
+  background-size: auto;
+
+  padding: 12px;
+  border-radius: 10px;
+
+  /* Marco en categorías de productos */
+  box-shadow:
+    0 8px 18px rgba(0,0,0,0.08),
+    inset 0 0 0 1px rgba(255,255,255,0.65),
+    inset 0 0 0 2px rgba(212,175,55,0.12);
 }
+
 .carrusel-track{
   display: grid;
   grid-auto-flow: column;
@@ -75,6 +87,7 @@
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  background: transparent;
 }
 
 /* CARRUSEL PRODUCTOS */
@@ -96,31 +109,37 @@
   scroll-snap-align: start;
   background: var(--white);
   border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 6px;
+  border-radius: 12px;
+  padding: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.producto-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
 }
 
 /* Recuadro de imagen uniforme */
 .producto-card img{
   width: 100%;
-  height: 80%;                     /* recuadro fijo para la imagen */
-  object-fit: contain;              /* la figura se adapta sin recortarse */
-  border: 1px solid #c9a1a8;
+  height: 75%;                     /* recuadro fijo para la imagen */
+  object-fit: cover;               /* para adaptar la imagen al recuadro */
+  border-radius: 8px;
+  border: none;
   background: var(--white);
-  border-radius: 6px;
 }
 
 /* Leyenda */
 .producto-card figcaption{
-  height: 20%;                      /* ocupa el resto de la tarjeta */
+  height: 25%;                      /* ocupa el resto de la tarjeta después de la imagen */
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;                  /* tipografía uniforme y legible */
+  font-size: 15px;
   text-align: center;
-  color: var(--text);
-  line-height: 1.5;
+  color: var(--muted);
+  line-height: 1.4;
   padding: 8px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* SCROLLBAR */
@@ -137,15 +156,68 @@
     max-width: calc(4 * var(--cardW) + 3 * var(--gap));
   }
 }
+
 @media (max-width: 720px){
   #productos .carrusel-track.productos-track{
     max-width: calc(3 * var(--cardW) + 2 * var(--gap));
   }
 }
+
 @media (max-width: 540px){
-  :root{ --cardW: var(--cardW-sm); --cardH: var(--cardH-sm); }
+  #productos{
+    padding-inline: 0;
+  }
+
+    .carrusel{
+    margin-inline: -16px;
+    border-radius: 0;
+    box-shadow:
+      0 4px 10px rgba(0,0,0,0.06),
+      inset 0 0 0 1px rgba(255,255,255,0.6);
+  }
+
+    :root{
+    --cardW: 140px;
+    --cardH: var(--cardH-sm);
+    --gap: 24px;
+  }
+
   #productos .carrusel-track.productos-track{
     max-width: calc(2 * var(--cardW) + 1 * var(--gap));
-    gap: 16px;
+    gap: var(--gap);
+  }
+}
+
+/* Ajuste de escala en el navegador */
+@media (min-width: 901px){
+  :root{
+    --cardW: 280px;
+    --cardH: 280px;
+    --gap: 28px;
+  }
+
+  .producto-card img{
+    height: 72%;
+  }
+
+  .producto-card figcaption{
+    height: 28%;
+    font-size: 17px;
+    line-height: 1.45;
+    font-style: italic;
+    padding: 10px;
+  }
+
+  .producto-card figcaption::before{
+    content: "“";
+  }
+
+  .producto-card figcaption::after{
+    content: "”";
+  }
+  
+#productos li > p{
+    font-size: 20px;
+    margin-bottom: 14px;
   }
 }
