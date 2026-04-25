@@ -1,0 +1,102 @@
+/* Selector CSS para Header */
+.header-container {
+    display: flex;
+    flex-direction: column;
+     align-items: center;
+    padding: 20px 20px;
+    background: #f1dadd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ }
+
+/* Selector CSS para Logo principal */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    /* Borde redondeado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    /* Sombras */
+}
+
+.logo img {
+    height: 200px;
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+    /* Borde redondeado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    /* Sombras */
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.logo h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Contenedor del menú principal con efecto gradiente de fondo */
+.menu-container {
+    width: 100%;
+    background-color: #fcf8f5;
+    /* Fondo suave y cálido */
+
+    background: linear-gradient(180deg, #c87a8b 10%, #f1dadd 90%);
+    /* degradado solo en el bloque del menú */
+
+    padding: 30px 0;
+}
+
+/* Selector para menu de navegación */
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin: 0;
+}
+
+.nav a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2em;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-style: italic;
+    color: #333;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav a:hover {
+    color: #eeeded;
+}
+
+/* Selector para texto inspirador debajo del logo menú */
+.texto-principal {
+    text-align: center;
+    max-width: 800px;
+    margin-top: 5px;
+}
+
+.texto-principal p {
+    font-size: 1.1em;
+    font-style: italic;
+    color: #333;
+    line-height: 1.5;
+}
+
+ 
+/* Efecto responsivo para el menu principal */
+@media (max-width: 768px) {
+    .nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav a {
+        font-size: 1em;
+    }
+}
