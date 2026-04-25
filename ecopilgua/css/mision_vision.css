@@ -1,0 +1,98 @@
+/* Tipografía, Colores de Fondo y Texto */
+main {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #fcf8f5;
+    color: #4a4a4a;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h2, h3 {
+    color: #c87a8b;
+    font-family: 'Georgia', serif;
+}
+
+/* Contenedor y Tarjetas (Box Model y Sombras) */
+.contenedor {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.tarjeta {
+    background-color: #ffffff;
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 5px solid #c87a8b;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* Columnas para Misión y Visión usando Flexbox */
+.layout-columnas {
+    display: flex;
+    gap: 30px;
+}
+
+.columna {
+    flex: 1;
+}
+/* Layouts: CSS Grid (Grilla para Testimonios) */
+.grilla-testimonios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.testimonio-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    font-style: italic;
+    border-left: 3px solid #c87a8b;
+}
+
+/*  Estilización de Formularios */
+.formulario {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.grupo-input {
+    margin-bottom: 15px;
+}
+
+    .grupo-input label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    .grupo-input input,
+    .grupo-input textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+.btn-enviar {
+    background-color: #c87a8b;
+    color: #ffffff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 100%;
+}
+
+    .btn-enviar:hover {
+        background-color: #a65c6c;
+    }
