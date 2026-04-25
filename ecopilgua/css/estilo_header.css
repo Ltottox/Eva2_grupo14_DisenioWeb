@@ -89,3 +89,14 @@
 }
 
  
+/* Efecto responsivo para el menu principal */
+@media (max-width: 768px) {
+    .nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav a {
+        font-size: 1em;
+    }
+}
