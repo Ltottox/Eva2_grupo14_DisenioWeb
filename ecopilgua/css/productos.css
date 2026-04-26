@@ -7,8 +7,8 @@
   --panel: #ffffff;
   --line: #D4AF37;     /* dorado suave */
   --bar: #e6c3c6;
-  --text: #2E2E2E;     /* gris oscuro elegante */
-  --muted: #555555;    /* gris medio */
+  --text: #7d3939;     /* burdeso oscuro */
+  --muted: #7d3939;    /* burdeos oscuro */
 
   --white: #ffffff;
   --scrollTrack: #F9E6EC;
@@ -24,9 +24,6 @@
   --cardH-sm: 200px;/* móvil */
   --gap: 20px;
 }
-
-/*Se Importan tipografías Playfair+Display y Montserrat */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@400;600&display=swap');
 
 #productos{
   background: var(--bg);
@@ -217,7 +214,9 @@
   }
   
 #productos li > p{
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 14px;
+    color: var(--text);
+    text-transform: uppercase
   }
 }
