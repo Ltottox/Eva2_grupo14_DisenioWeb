@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/productos.css">
     <link rel="stylesheet" href="css/style.footer.css">
+    <link rel="stylesheet" href="css/mision_vision.css">
+
     <title>Eco Pilgua</title>
 </head>
 
@@ -50,30 +52,7 @@
 
     <main>
 
-        <!-- Sección de Historia de la Empresa -->
-        <section id="historia">
-            <h2>Nuestra Historia</h2>
-            <p>Hace 10 años la vida me enfrentó a una gran pérdida: quedé viuda cuando mis hijos aún eran pequeños.
-                Buscando una manera de ser una mamá presente y, al mismo tiempo, salir adelante, comencé a emprender.
-                Con el paso del tiempo fui descubriendo un talento que no sabía que tenía: el diseño.</p>
-            <p>Así nació Eco Pilgua —un nombre que representa crecimiento, cariño y resiliencia. Cada producto que
-                realizo está hecho con dedicación, cariño y autenticidad, como si fuera un regalo para mí misma. Hoy,
-                Eco Pilgua es más que un emprendimiento. Es el resultado de convertir el dolor en arte.</p>
-        </section>
-
-        <!-- Sección de Misión y Visión -->
-        <section id="mision-vision">
-            <h2>Misión</h2>
-            <p>En Eco Pilgua creamos productos personalizados que transforman ideas en piezas únicas llenas de color,
-                emoción y significado. Nuestra misión es acompañar a cada cliente desde la inspiración hasta el
-                resultado final, entregando productos de papelería creativa y sublimación que combinan diseño,
-                funcionalidad y cariño, fomentando la expresión personal y el valor del trabajo hecho a mano.</p>
-
-            <h2>Visión</h2>
-            <p>Ser una marca reconocida a nivel nacional por nuestra creatividad, rapidez y compromiso con cada persona.
-                Buscamos consolidarnos como un referente en papelería creativa y productos sublimados, impulsando la
-                sostenibilidad, la innovación y el espíritu emprendedor local.</p>
-        </section>
+        
 
         <!-- Sección de Productos -->
         <section id="productos">
@@ -277,38 +256,67 @@
          </ul>
         </section>
 
-        <!-- Sección de Testimonios -->
-        <section id="testimonios">
-            <h2>Testimonios de nuestros clientes</h2>
-            <div>
-                <p>"Le conté mi idea y en minutos ya tenía el diseño, quedó hermoso. ¡Atención rápida y 100 %
-                    personalizada!"<br> <strong>— Carolina, cliente frecuente.</strong></p>
-                <p>"Los productos de Eco Pilgua son preciosos y duraderos. Siempre recibo elogios por los tazones y
-                    cuadernos personalizados..."<br> <strong>— Danae, clienta frecuente.</strong></p>
-                <p>"Excelente atención y compromiso, todo llega a tiempo y con una presentación impecable."<br>
-                    <strong>— Cindy M., enfermera.</strong>
-                </p>
-            </div>
-        </section>
+     
+        <!-- Sección de Historia de la Empresa -->
+<section id="historia" class="tarjeta">
+    <h2>Nuestra Historia</h2>
+    <p>Hace 10 años la vida me enfrentó a una gran pérdida: quedé viuda cuando mis hijos aún eran pequeños. Buscando una manera de ser una mamá presente y, al mismo tiempo, salir adelante, comencé a emprender. Con el paso del tiempo fui descubriendo un talento que no sabía que tenía: el diseño.</p>
+    <p>Así nació Eco Pilgua —un nombre que representa crecimiento, cariño y resiliencia. Cada producto que realizo está hecho con dedicación, cariño y autenticidad, como si fuera un regalo para mí misma. Hoy, Eco Pilgua es más que un emprendimiento. Es el resultado de convertir el dolor en arte.</p>
+</section>
 
-        <!-- Formulario de Contacto Básico 
-        <section id="contacto">
-            <h2>Escríbenos</h2>
-            <form action="/enviar_datos" method="post">
-                <label for="nombre">Nombre:</label><br>
-                <input type="text" id="nombre" name="nombre" required><br><br>
+<!-- Sección de Misión y Visión -->
+<section id="mision-vision" class="tarjeta layout-columnas">
+    <div class="columna">
+        <h2>Misión</h2>
+        <p>En Eco Pilgua creamos productos personalizados que transforman ideas en piezas únicas llenas de color, emoción y significado. Nuestra misión es acompañar a cada cliente desde la inspiración hasta el resultado final, entregando productos de papelería creativa y sublimación que combinan diseño, funcionalidad y cariño, fomentando la expresión personal y el valor del trabajo hecho a mano.</p>
+    </div>
+    <div class="columna">
+        <h2>Visión</h2>
+        <p>Ser una marca reconocida a nivel nacional por nuestra creatividad, rapidez y compromiso con cada persona. Buscamos consolidarnos como un referente en papelería creativa y productos sublimados, impulsando la sostenibilidad, la innovación y el espíritu emprendedor local.</p>
+    </div>
+</section>
 
-                <label for="correo">Correo electrónico:</label><br>
-                <input type="email" id="correo" name="correo" required><br><br>
+<!-- Sección de Testimonios -->
+<section id="testimonios" class="tarjeta">
+    <h2>Testimonios de nuestros clientes</h2>
+    <div class="grilla-testimonios">
+        <div class="testimonio-item">
+            <p>"Le conté mi idea y en minutos ya tenía el diseño, quedó hermoso. ¡Atención rápida y 100 % personalizada!"</p>
+            <strong>— Carolina, cliente frecuente.</strong>
+        </div>
+        <div class="testimonio-item">
+            <p>"Los productos de Eco Pilgua son preciosos y duraderos. Siempre recibo elogios por los tazones y cuadernos personalizados..."</p>
+            <strong>— Danae, clienta frecuente.</strong>
+        </div>
+        <div class="testimonio-item">
+            <p>"Excelente atención y compromiso, todo llega a tiempo y con una presentación impecable."</p>
+            <strong>— Cindy M., enfermera.</strong>
+        </div>
+    </div>
+</section>       
+                 <!-- Formulario de Contacto -->
+    <!-- <section id="contacto-form" class="tarjeta">
+    <h2>Escríbenos</h2>
+    <form action="/enviar_datos" method="post" class="formulario">
+        <div class="grupo-input">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="grupo-input">
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+        </div>
+        <div class="grupo-input">
+            <label for="mensaje">Idea o diseño que buscas:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+    </form>
+</section-->
+    <!--el formulario de contacto por el momento lo he dejado comentado ya que contiene un boton que no va a tener funcionamiento
+para efectos de este trabajo, sin embargo puede ser útil en el futuro-->   
 
-                <label for="mensaje">Idea o diseño que buscas:</label><br>
-                <textarea id="mensaje" name="mensaje" required></textarea><br><br>
-
-                <button type="submit">Enviar</button>
-            </form>
-        </section>-->
-        <!--el formulario de contacto por el momento lo he dejado comentado ya que contiene un boton que no va a tener funcionamiento
-        para efectos de este trabajo, sin embargo puede ser útil en el futuro-->
+    
     </main>
 
    <!-- Footer con Datos de Contacto y Redes Sociales -->
@@ -326,7 +334,7 @@
             </li>
 
             <li>                
-                 <a href=" https://www.facebook.com/ecopilgua" target="_blank">
+                 <a href="https://www.facebook.com/ecopilgua" target="_blank">
                     <img src="imagenes/icons/icon-facebook.jpg" alt="Facebook" width="20" height="20">
                  </a>
 
@@ -353,7 +361,7 @@
         </div>          
 
 
-        </section>
+        
 
         <section class="ubicacion">
             <li>
