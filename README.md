@@ -6,12 +6,14 @@ Este proyecto es un **mockup web** que muestra la historia, misión, visión, pr
 ---
 
 ## Descripción
-El sitio web está desarrollado en **HTML5** y presenta:
-- Una página principal con navegación interna.
-- Secciones de historia, misión y visión.
-- Catálogo de productos con imágenes y descripciones.
-- Testimonios de clientes.
-- Footer con datos de contacto y redes sociales.
+Para esta segunda Parte del proyecto.
+El sitio web está desarrollado en HTML5 y CSS3 con diseño responsivo. Incluye:
+Navegación interna con header fijo.
+Secciones de historia, misión y visión con tarjetas.
+Catálogo de productos con carruseles horizontales por categoría.
+Testimonios de clientes.
+Footer con contacto, redes sociales y ubicación.
+
 
 ---
 
@@ -21,41 +23,20 @@ El objetivo de este mockup es servir como prototipo visual para la marca Eco Pil
 ---
 
 ## Tecnologías utilizadas
-- **HTML5** para la estructura del contenido.
-- **Imágenes locales** para ilustrar productos y servicios.
-- **Estilos inline** (sin CSS externo) para pruebas rápidas de diseño.
+
+HTML5 para la estructura semántica.
+CSS3 con variables, flexbox, grid y media queries.
+Git y GitHub para control de versiones con ramas.
+
 
 ---
-
-## Estructura del proyecto
-index.html        # Página principal
-imagenes/         # Carpeta con imágenes de productos y logotipos
-README.md         # Documentación del proyecto
-
----
-
-## Vista previa
-El sitio incluye secciones con productos como:
-- Agendas, cuadernos y planificadores.
-- Stickers y papelería creativa.
-- Tazones, cojines y cerámicas sublimadas.
-- Diseños exclusivos para regalos y empresas.
-
----
-
-## Contacto
-- Instagram: [@ecopilgua](https://instagram.com/ecopilgua)  
-- Facebook: Eco Pilgua  
-- TikTok: Eco Pilgua  
-- WhatsApp: +56 9 3277 6583  
-- Correo: [ecopilgua@gmail.com](mailto:ecopilgua@gmail.com)  
-- Dirección: Con envío a todo Chile. En Talca se puede coordinar según disponibilidad.
-
----
-
-## Estado del proyecto
-Este mockup está en desarrollo y se utiliza como práctica para estructurar un sitio web básico.  
-En el futuro se puede ampliar con CSS, JavaScript y funcionalidades dinámicas.
+Mejoras de la Evaluación 2
+CSS modular: 4 archivos independientes por sección.
+Variables CSS: paleta de colores y tokens de diseño centralizados.
+Carruseles funcionales: scroll horizontal con snap en productos.
+Responsividad real: adaptación a móvil, tablet y escritorio.
+Imágenes organizadas: nomenclatura uniforme por categoría.
+Microinteracciones: hovers y transiciones en tarjetas y botones
 
 ---
 ## Repositorio Github
